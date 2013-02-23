@@ -1,0 +1,31 @@
+ body {
+        padding-top: 20px;
+        padding-bottom: 0px;
+		}
+
+.pad {
+  border: 1px solid #C15D63	;
+     
+}
+
+.fixed {
+ position: absolute;
+ }
+
+
+.sidebar-nav-fixed {
+    padding: 9px 0;
+    position:fixed;
+    left:20px;
+    top:60px;
+    width:250px;
+}
+
+.row-fluid > .span-fixed-sidebar {
+    margin-left: 290px;
+}
+
+
+
+
+	

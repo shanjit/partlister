@@ -1,0 +1,2 @@
+module PartlistHelper
+end

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Partlister::Application.load_tasks
+PartlisterNew::Application.load_tasks

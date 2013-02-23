@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: partlister_development
+  database: partlisternew_development
   pool: 5
   username: cuil
   password: qwerty!
@@ -41,7 +41,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: partlister_test
+  database: partlisternew_test
   pool: 5
   username: cuil
   password: qwerty!
@@ -49,7 +49,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: partlister_production
+  database: partlisternew_production
   pool: 5
   username: cuil
-  password: qwerty!
+

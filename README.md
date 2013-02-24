@@ -21,3 +21,4 @@ partlister
       Currently hosted on heroku.
       
       
+Complete documentation available on my blog tomorrow. 

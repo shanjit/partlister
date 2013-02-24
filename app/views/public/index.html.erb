@@ -1,4 +1,22 @@
 <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container-fluid">
@@ -13,8 +31,9 @@
         <ul class="nav pull-right">
 
           <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/admin">Sign-in</a></li>
+          <li><a href="http://www.github.com/shanjit/cedt-partlister">Source + Wiki</a></li>
+          <li><a href="http://www.shanjitsingh.in">Contact</a></li>
         </ul>
         
       </div><!--/.nav-collapse -->
@@ -23,7 +42,9 @@
   </div>
 </div>
 
+
 <div class="container-fluid">
+
   <div class="row-fluid row">
     <div class="span3">
       <div class="well sidebar-nav-fixed nav nav-pills nav-fixed nav-stacked">
@@ -62,25 +83,29 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
 			  <tbody>
+			  <% @resistors.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.link %>">Link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				  
+				</tr>
+				<% end %>
 			  </tbody>
 			</table>
 </section>
@@ -96,25 +121,31 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Type</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
 			  <tbody>
+			  <% @capacitors.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.type %></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.mouser %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				  
+				</tr>
+				<% end %>
 			  </tbody>
 			</table>
 </section>
@@ -129,25 +160,30 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Type</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
 			  <tbody>
+			  <% @diodes.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.type %></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.mouser %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				</tr>
+				<% end %>
 			  </tbody>
 			</table>
 </section>
@@ -158,29 +194,32 @@
 <h2>NPN Transistors</h2>
 </div>
 <table class="table table-striped">
-			  <thead>
+			    <thead>
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
 			  <tbody>
+			  <% @npntransistors.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.link %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				</tr>
+				<% end %>
 			  </tbody>
 			</table>
 </section>	
@@ -195,25 +234,30 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
 			  <tbody>
+			  <tbody>
+			  <% @pnptransistors.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.link %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				  
+				</tr>
+				<% end %>
 			  </tbody>
 			</table>
 </section>
@@ -228,25 +272,29 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
-			  <tbody>
+			 <tbody>
+			  <% @leds.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.link %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				  
+				</tr>
+				<% end %>
 			  </tbody>
 			</table>
 </section>
@@ -261,27 +309,31 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
-			  <tbody>
+			 <tbody>
+			  <% @clocksources.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.link %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				  
+				</tr>
+				<% end %>
 			  </tbody>
-			</table>
+			  </table>
 </section>
 
 
@@ -294,31 +346,35 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
 			  <tbody>
+			  <% @regulators.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.link %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				  
+				</tr>
+				<% end %>
 			  </tbody>
-			</table>
+			  </table>
 </section>
 
 
-<section id="ferritebeads">
+<section id="ferritebead">
 <div class="page-header">
 <h2>Ferrite Beads</h2>
 </div>
@@ -327,25 +383,28 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
 			  <tbody>
+			  <% @ferritebeads.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.package %></td>
+				 <td><%=  element.description %></td>
+				  <td><a href="<%=  element.link %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				</tr>
+				<% end %>
 			  </tbody>
 			</table>
 </section>
@@ -360,25 +419,29 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
 			  <tbody>
+			  <% @resettablepolyfuses.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.link %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				  
+				</tr>
+				<% end %>
 			  </tbody>
 			</table>
 </section>
@@ -393,25 +456,29 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
 			  <tbody>
+			  <% @inductors.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.link %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				  
+				</tr>
+				<% end %>
 			  </tbody>
 			</table>
 </section>
@@ -426,27 +493,31 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
-			  <tbody>
+			 <tbody>
+			  <% @buttonandswitches.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.distribution %></td>
+				  <td><a href="<%=  element.link %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				  
+				</tr>
+				<% end %>
 			  </tbody>
-			</table>
+			  </table>
 </section>
 
 
@@ -459,27 +530,29 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
 			  <tbody>
+			  <% @connectors.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.link %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				  
+				</tr>
+				<% end %>
 			  </tbody>
-			</table>
+			  </table>
 </section>
 
 <section id="sensors">
@@ -491,27 +564,31 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Package</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
-			  <tbody>
+			 <tbody>
+			  <% @sensors.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.link %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				  
+				</tr>
+				<% end %>
 			  </tbody>
-			</table>
+			  </table>
 </section>
 
 <section id="ics">
@@ -523,25 +600,31 @@
 				<tr>
 				  <th>#</th>
 				  <th>Image</th>
-				  <th>Size</th>
-				  <th>Mouser</th>
-				  <th>Digikey</th>
-				  <th>Farnell</th>
+				  <th>Type</th>
+				  <th>Package</th>
+				  <th>Description</th>
+				  <th>Link</th>
+				  <th>Datasheet</th>
 				  <th>Quantity</th>
 				</tr>
 			  </thead>
 
-			  <tbody>
+			 <tbody>
+			  <% @ics.each do |element, index| %>
 				<tr>
-				  <td>1</td>
-				  <td>a</td>
-				  <td>b</td>
-				  <td><a href="">c</a></td>
-				  <td>d</td>
-				  <td>e</td>
-				  <td>f</td>
-				</tr>
 				
+				<td> <%=  element.id %>
+					</td>
+				  <td><img src="<%=  element.imageurl %>" height="25%" width="25%"></td>
+				  <td><%=  element.type %></td>
+				  <td><%=  element.package %></td>
+				  <td><%=  element.description %></td>
+				  <td><a href="<%=  element.link %>">link</a></td>
+				  <td><%=  element.datasheet %></td>
+				  <td><%=  element.quantity %></td>
+				  
+				</tr>
+				<% end %>
 			  </tbody>
 			</table>
 </section>
@@ -554,7 +637,7 @@
   <hr>
 
   
-  <div class="breadcrumb" align="right">
+  <div class="offset1" align="right" >
   
   <a >Made by Shanjit Singh Jajmann</a>
   

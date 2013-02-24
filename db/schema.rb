@@ -11,138 +11,129 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130223200638) do
+ActiveRecord::Schema.define(:version => 20130223230852) do
 
   create_table "buttonandswitches", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "capacitors", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.string   "type"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "clocksources", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "connectors", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "diodes", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.string   "type"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "ferritebeads", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "ics", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "type"
+    t.string   "package"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "inductors", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "leds", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "npntransistors", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "pnptransistors", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "rails_admin_histories", :force => true do |t|
@@ -160,50 +151,46 @@ ActiveRecord::Schema.define(:version => 20130223200638) do
 
   create_table "regulators", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "resettablepolyfuses", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "resistors", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "sensors", :force => true do |t|
     t.string   "imageurl"
-    t.string   "size"
-    t.string   "mouser"
-    t.string   "digikey"
-    t.string   "farnell"
+    t.string   "package"
+    t.text     "description"
+    t.string   "link"
+    t.string   "datasheet"
     t.integer  "quantity"
-    t.boolean  "display"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|

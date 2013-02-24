@@ -10,13 +10,13 @@ partlister
       
       Initially created for managing the component inventory at the 
       Centre for Electronic Design and Technology, NSIT Lab, the 
-      application is now open-sourced. <br>
+      application is now open-sourced.
       
       
       partlister.shanjitsingh.in . A resistor has been added as an example.
       
-      admin email id - demo@demo.com <br>
-      admin password - password <br>
+      admin email id - demo@demo.com
+      admin password - password
       
       Currently hosted on heroku.
       

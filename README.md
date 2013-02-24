@@ -1,12 +1,23 @@
-cedt-partlister
-===============
+partlister
+==========
 
-A Component Part Lister for CEDT
-
-Using Twitter-Bootstrap, Ruby on Rails (Devise, Rails_admin). 
-
-Developed by Shanjit Singh Jajmann. www.shanjitsingh.in
-
-Demo at partlister.shanjitsingh.in
-
-Fork and enjoy!
+      The partlister is an Open-Source Ruby on Rails application 
+      designed to help manage a electronic inventory.
+      
+      Created as a weekend project, the application uses 
+      Twitter Bootstrap for its front-end design and the Rails
+      framework for its backend.
+      
+      Initially created for managing the component inventory at the 
+      Centre for Electronic Design and Technology, NSIT Lab, the 
+      application is now open-sourced. <br>
+      
+      
+      partlister.shanjitsingh.in . A resistor has been added as an example.
+      
+      admin email id - demo@demo.com <br>
+      admin password - password <br>
+      
+      Currently hosted on heroku.
+      
+      
